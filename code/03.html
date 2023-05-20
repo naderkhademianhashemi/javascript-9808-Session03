@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="G:\UNIVERSITY\FAD\javascript-9808\session03\code\node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       
+    </div>
+    <button>Add</button>
+    <script>
+
+        //Relative path
+        
+        let products = [
+            {name: "Product 1", price: 1000, img:  "http://lorempixel.com/400/200/food/1"},
+            {name: "Product 2", price: 2000, img:  "http://lorempixel.com/400/200/food/2"},
+            {name: "Product 3", price: 3000, img:  "http://lorempixel.com/400/200/food/3"},
+        ]
+
+        for(let i=0; i< products.length; i++){
+            let product = products[i];
+            let html = ` 
+                <div class="card" style="width: 18rem;">
+                <img src="#img#" class="card-img-top" >
+                <div class="card-body">
+                    <h5 class="card-title">#name#</h5>
+                    <p class="card-text">$ #price#</p>
+                    <a href="#" class="btn btn-primary">Add to card</a>
+                </div>
+            </div>`
+            .replace("#img#", product.img)
+            .replace("#name#", product.name)
+            .replace("#price#", product.price)
+
+            document.querySelector('.container').innerHTML += html;
+        }
+        
+        
+    </script>
+</body>
+</html>

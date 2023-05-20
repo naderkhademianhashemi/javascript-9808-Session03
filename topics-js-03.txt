@@ -1,0 +1,143 @@
+jsfiddle.net
+
+jsbin.com
+
+https://jamstack.org/generators/
+
+cdnjs.com
+
+https://learngitbranching.js.org/
+
+Emmet 
+	.container>input:file
+	
+Powershell install package
+	npm i bootstrap
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+	href="G:\UNIVERSITY\FAD\javascript-9808\session03\code\node_modules\bootstrap\dist\css\bootstrap.min.css"
+	
+Session 03
+Review
+	Base concepts:
+		varibale
+		boolean
+		array
+		object
+		function
+			statment
+			expression
+			lambda
+		scope
+	BOM
+	DOM
+		getElement*
+		querySelector
+		innerHTML/innerText
+		attributes
+
+
+		Events
+		Event & Event Handling
+		HTML
+			onclick
+		JS
+			onclick = function...
+			addEventListner
+				inline function OR lamda expression OR arrow function
+				
+------------------------------------------------------------------------	
+	
+	setTimeout/clearTimeout
+	setInterval/clearInterval
+		let x = setInterval( () => {
+            alert("Hello");
+            clearInterval(x)
+        }, 3000  );
+	
+	
+	performance tips
+		dom query not in for loops!
+		
+	dynamic content
+		innerHTML
+			example
+		createElement &	appendChild	
+			example
+			
+		event handling onclick
+			id?
+			createElement().addEventListner...
+			
+		innerHTML vs createElement
+		
+			document.querySelector("button").addEventListener("click", () => {
+            // document.querySelector('.container').innerHTML += `<br><input id="input-${id}">`;
+            // document.querySelector('#input-' + id).addEventListener('click', () => {
+            //     alert("test");
+            // });
+            // id++;
+
+
+            let file = document.createElement("input");
+            let br = document.createElement("br");
+            //file.setAttribute("type", 'file');
+            // file.type="file" ;  
+            file.addEventListener('click', () => {
+                alert('aaaaa');
+            })          
+            document.querySelector('.container').appendChild(br);                                    
+            document.querySelector('.container').appendChild(file);
+
+        })
+		
+		Homework Solution	
+	
+	
+	Templates
+		backticks
+				
+		replace	 G:\UNIVERSITY\FAD\javascript-9808\session03\code\04.html
+			inline html
+			div display none
+			script type="text/template"				
+		reflection
+			obj.name
+			obj['name']
+			for(let key in obj){
+				let value = obj[key]
+			}			
+		replace with reflection
+		
+	
+	Template Engine		
+		handlebars
+			handlebarsjs.com
+			{{ }}
+			
+	How to add js lib
+		download manualy
+			project site
+			github
+				zip
+				release
+		cdn
+			content delivery network
+		package managers
+			npm	
+				install bootstrap in npm folder
+				newFolder npm ->cmd ->npm i bootstrap
+			bower
+			nuget
+	01:58:00
+	01:33:00
+	Handlebars(asp dataBind)
+		render = Handlebars.compile(template);
+		render(data)
+		
+		{{# each this}}
+		{{/each}}
+	
+	cmd 
+		http-server .
+		
+	Array Sort

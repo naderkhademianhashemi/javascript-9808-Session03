@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+    </div>
+    <button>Add</button>
+    <script>
+        let id = 0;
+        document.querySelector("button").addEventListener("click", () => {
+            // document.querySelector('.container').innerHTML += `<br><input id="input-${id}">`;
+            // document.querySelector('#input-' + id).addEventListener('click', () => {
+            //     alert("test");
+            // });
+            // id++;
+
+
+            let file = document.createElement("input");
+            let br = document.createElement("br");
+            //file.setAttribute("type", 'file');
+            // file.type="file" ;  
+            file.addEventListener('click', () => {
+                alert('aaaaa');
+            })          
+            document.querySelector('.container').appendChild(br);                                    
+            document.querySelector('.container').appendChild(file);
+
+        })
+    </script>
+</body>
+</html>

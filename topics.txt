@@ -1,0 +1,92 @@
+Session 03
+Review
+	Base concepts:
+		varibale
+		boolean
+		array
+		object
+		function
+			statment
+			expression
+			lambda
+		scope
+	BOM
+	DOM
+		getElement*
+		querySelector
+		innerHTML/innerText
+		attributes
+	Events
+		Event & Event Handling
+		HTML
+			onclick
+		JS
+			onclick = function...
+			addEventListner
+				inline function OR lamda expression OR arrow function
+				
+------------------------------------------------------------------------	
+	
+	setTimeout/clearTimeout
+	setInterval/clearInterval
+	
+	performance tips
+		dom query not in for loops!
+		
+	dynamic content
+		innerHTML
+			example
+		createElement &	appendChild	
+			example
+			
+		event handling onclick
+			id?
+			createElement().addEventListner...
+			
+		innerHTML vs createElement
+				
+		
+		Homework Solution	
+	
+	
+	Templates
+		backticks		
+		replace	
+			inline html
+			div display none
+			script type="text/template"				
+		reflection
+			obj.name
+			obj['name']
+			for(let key in obj){
+				let value = obj[key]
+			}			
+		replace with reflection
+		
+	
+	Template Engine		
+		handlebars
+			{{ }}
+			
+	How to add js lib
+		download manualy
+			project site
+			github
+				zip
+				release
+		cdn
+			content delivery network
+		package managers
+			npm
+			bower
+			nuget
+	
+	Handlebars
+		render = Handlebars.compile(template);
+		render(data)
+		
+		{{# each this}}
+		{{/each}}
+		
+		
+	Array Sort

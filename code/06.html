@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/handlebars/dist/handlebars.min.js" ></script>
+    <title>Document</title>
+</head>
+<body>
+    <script class="template" type="text/template">
+        {{#each this}}
+        <div class="card" style="width: 18rem;">
+            <img src="{{img}}" class="card-img-top" >
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text">$ {{price}}</p>
+                <p class="card-text label label-danger">Mojodi: {{mojodi}}</p>
+
+                <a href="#" class="btn btn-danger">Add to card</a>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <div class="container">
+       
+    </div>
+    <button>Add</button>
+    <script>
+
+        //Relative path
+        
+        let products = [
+            {name: "Product 1", price: 1000, img:  "http://lorempixel.com/400/200/food/1", mojodi: "bale"},
+            {name: "Product 2", price: 2000, img:  "http://lorempixel.com/400/200/food/2", mojodi: "khair"},
+            {name: "Product 3", price: 3000, img:  "http://lorempixel.com/400/200/food/3", mojodi: "bale"},
+        ]
+
+        
+        const html = document.querySelector('.template').innerHTML;
+        let  render = Handlebars.compile(html);
+        document.querySelector('.container').innerHTML += render(products);
+   
+        
+        
+    </script>
+</body>
+</html>
